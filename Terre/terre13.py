@@ -28,7 +28,7 @@ third_number = sys.argv[3:4]
 
 ### Problem solving ###
 
-resultat = find_middle_number(first_number, second_number, third_number, error)
+resultat = "".join(find_middle_number(first_number, second_number, third_number, error))
 ### Result ###
 
-print(resultat, first_number)
+print(resultat)
