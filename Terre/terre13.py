@@ -4,31 +4,39 @@ import sys
 
 ### Function ###
 
-def find_middle_number(a, b, c, d):
+def find_middle_number(first, second, third):
 
-    try:
-        if a > b and a < c or a < b and a > c:
-            return a
-        elif b > a and b < c or b < a and b > c:
-            return b
-        else:
-            c
-    except ValueError:
-        return d
+
+    if first > second and first < third or first < second and first > third:
+        return first
+    elif second > first and second < third or second < first and second > third:
+        return second
+    else:
+        return third
+
+def error():
+
+    if len(sys.argv[1:]) != 3:
+        print("Le nomnbre d'argument n'est pas correct")
+        exit()
+
+    if not sys.argv[1].isdigit() or not sys.argv[2].isdigit() or not sys.argv[3].isdigit():
+        print("erreur.")
+        exit()
 
 ### Error ###
 
-error = "erreur."
+error()
 
 ### Parsing ###
 
-first_number = sys.argv[1:2]
-second_number = sys.argv[2:3]
-third_number = sys.argv[3:4]
+first_number = int(sys.argv[1])
+second_number = int(sys.argv[2])
+third_number = int(sys.argv[3])
 
 ### Problem solving ###
 
-resultat = "".join(find_middle_number(first_number, second_number, third_number, error))
+resultat = find_middle_number(first_number, second_number, third_number)
 ### Result ###
 
 print(resultat)
