@@ -16,11 +16,11 @@ def find_middle_number(first, second, third):
 
 def error():
 
-    if len(sys.argv[1:]) != 3:
+    if len(sys.argv) != 4:
         print("Le nomnbre d'argument n'est pas correct")
         exit()
 
-    if not sys.argv[1].isdigit() or not sys.argv[2].isdigit() or not sys.argv[3].isdigit():
+    if not sys.argv[1].lstrip("-+").isdigit() or not sys.argv[2].lstrip("-+").isdigit() or not sys.argv[3].lstrip("-+").isdigit():
         print("erreur.")
         exit()
 
