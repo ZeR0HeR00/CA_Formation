@@ -12,25 +12,28 @@ import sys
 
 ### Function ###
 
-def alphabet():
+def alphabet(l):
 
     a = 97
     z = 123
 
-    for i in range(a, z):
-        print(chr(i), end = "")
-
-def find_
+    alphabet = [chr(i) for i in range(a, z)]
+    
+    lettre = alphabet.index(l)
+    resultat = "".join(alphabet[lettre:])
+    print(resultat)
+    exit()
 ### Error ###
+
 
 ### Parsing ###
 
-letter = sys.argv
+letter = sys.argv[1]
 
 ### Problem solving ###
 
-resultat = alphabet()
+res = alphabet(letter)
 
 ### Result ###
 
-print(resultat)
+print(res)
