@@ -34,8 +34,6 @@ error()
 
 number_of_arguments = "".join(sys.argv[1:])
 
-
-
 ### Problem solving ###
 
 resultat = chain_size(number_of_arguments)
