@@ -6,13 +6,13 @@ import sys
 
 def name_file(path):
     
-    return "".join(path)
+    return (path)
 
 
 ### Error ###
 ### Parsing ###
 
-name = sys.argv
+name = sys.argv[0]
 
 ### Problem solving ###
 
