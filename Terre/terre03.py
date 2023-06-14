@@ -12,19 +12,24 @@ import sys
 
 ### Function ###
 
-def alphabet(l):
-
-    a = 97
-    z = 123
-
-    alphabet = [chr(i) for i in range(a, z)]
+def alphabet(letter):
     
-    lettre = alphabet.index(l)
-    resultat = "".join(alphabet[lettre:])
-    print(resultat)
-    exit()
+    alphabet = [chr(i) for i in range(ord(letter), ord("z") + 1)]
+    return alphabet
+
+def error(arg):
+
+    if len(arg) != 2:
+        print("erreur")
+        exit()
+
+    if ord(arg[1]) < 97 or ord(arg[1]) > 123:
+        print("erreur")
+        exit()
+    
 ### Error ###
 
+error(sys.argv)
 
 ### Parsing ###
 
@@ -32,8 +37,8 @@ letter = sys.argv[1]
 
 ### Problem solving ###
 
-res = alphabet(letter)
+resultat = "".join(alphabet(letter))
 
 ### Result ###
 
-print(res)
+print(resultat)
