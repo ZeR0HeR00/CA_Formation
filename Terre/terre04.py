@@ -23,14 +23,9 @@ def even_or_odd(number):
 
 def error():
 
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 2 or not sys.argv[1].isdigit():
         print("erreur.")
         exit()
-    
-    if not sys.argv[1].isdigit():
-        print("erreur")
-        exit()
-
 
 ### Error ###
 
