@@ -19,7 +19,6 @@ def first_number(number):
     
     if i == number:
         return f"Oui, {number} est un nombre premier."
-
     else:
         return f"Non, {number} n'est pas un nombre premier."
 
