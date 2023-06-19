@@ -4,16 +4,16 @@ import sys
 
 ### Function ###
 
-def time_conversion_split(heure):
+def time_conversion_split(hour_time):
 
-    heure = "".join(heure).split(":")
-    return heure
+    hour_time = "".join(hour_time).split(":")
+    return hour_time
 
-def time_conversion(heure, am, pm):
+def time_conversion(hour_time, am, pm):
 
-    liste = time_conversion_split(heure)
+    hour_and_minute = time_conversion_split(hour_time)
 
-    hour, minute = int("".join(liste[0])), int("".join(liste[1]))
+    hour, minute = int("".join(hour_and_minute[0])), int("".join(hour_and_minute[1]))
     
     if hour == 00:
         hour = 12
@@ -30,12 +30,12 @@ def time_conversion(heure, am, pm):
 
 def error():
 
-    liste = time_conversion_split(sys.argv[1:])
+    hour_and_minute = time_conversion_split(sys.argv[1:])
 
-    if not liste[0].isdigit() or not liste[1].isdigit():
+    if not hour_and_minute[0].isdigit() or not hour_and_minute[1].isdigit():
         print("heure et minute doivent correspandre à des nombre")
         exit()
-    elif len(liste) != 2 or len(liste[0]) > 2 or len(liste[1]) > 2:
+    elif len(hour_and_minute) != 2 or len(hour_and_minute[0]) > 2 or len(hour_and_minute[1]) > 2:
         print("erreur")
         exit()
 
@@ -46,13 +46,13 @@ error()
 
 ### Parsing ###
 
-heures_complet = sys.argv[1]
+hour_complet = sys.argv[1]
 morning = "AM"
 evening = "PM"
 
 ### Problem solving ###
 
-resultat = time_conversion(heures_complet, morning, evening)
+resultat = time_conversion(hour_complet, morning, evening)
 
 ### Result ###
 
