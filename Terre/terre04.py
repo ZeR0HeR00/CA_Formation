@@ -11,7 +11,7 @@ import sys
 
 ### Function ###
 
-def even_or_odd(number):
+def is_even_or_odd(number):
 
     val = int(number)
 
@@ -37,7 +37,7 @@ number = sys.argv[1]
 
 ### Problem solving ###
 
-resultat = even_or_odd(number)
+resultat = is_even_or_odd(number)
 
 
 ### Result ###
