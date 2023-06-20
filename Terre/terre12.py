@@ -32,7 +32,7 @@ def time_conversion(hour_time,am_or_pm):
 def handle_error():
 
     if sys.argv != 2:
-        print("erreur")
+        print("Veuillez à rentrer des arguement")
         exit()
     
     hour_and_minute = time_conversion_split(sys.argv[1])

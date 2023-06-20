@@ -34,6 +34,10 @@ def time_conversion(hour_time, am, pm):
 
 def handle_error():
 
+    if sys.argv != 2:
+        print("Veuillez à rentrer des arguement")
+        exit()
+
     hour_and_minute = time_conversion_split(sys.argv[1:])
 
     if not hour_and_minute[0].isdigit() or not hour_and_minute[1].isdigit():
