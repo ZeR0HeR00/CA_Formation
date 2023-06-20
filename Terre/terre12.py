@@ -16,22 +16,22 @@ def time_conversion(hour_time,am_or_pm):
     hour, minute = int("".join(hour_and_minute[0])), int(
         "".join(hour_and_minute[1]))
     
-    if am_or_pm == "AM":
-
+    if am_or_pm == "PM":
+        
+        if hour >= 1 and hour <= 11:
+            return f"{hour + 12}:{minute}"
+        elif hour == 12:
+            return f"{hour}:{minute}"
+    else:
         if hour >= 12:
             return f"{hour - 12}:{minute}"
         
-        if hour >= 1 or hour <= 12:
+        if hour >= 1 and hour <= 12:
             return f"{hour}:{minute}"
         
-    if am_or_pm == "PM":
-
-        if hour >= 1 or hour <= 11:
-            return f"{hour + 12}:{minute}"
-
 def handle_error():
 
-    if sys.argv != 2:
+    if len(sys.argv) != 3:
         print("Veuillez à rentrer des arguement")
         exit()
     
@@ -40,7 +40,7 @@ def handle_error():
     if not hour_and_minute[0].isdigit() or not hour_and_minute[1].isdigit():
         print("Heure et minute doivent correspondre à des nombre")
         exit()
-    elif len(hour_and_minute) != 2 or len(hour_and_minute[0]) > 2 or len(hour_and_minute[1]) > 2 or len(sys.arg[2]) != 1:
+    elif len(hour_and_minute) != 2 or len(hour_and_minute[0]) > 2 or len(hour_and_minute[1]) > 2:
         print("Veuillez à entrer le bon modèle d'heure et de minutes")
         exit()
     elif int(hour_and_minute[0]) > 12 or int(hour_and_minute[1]) > 59:
@@ -54,7 +54,7 @@ handle_error()
 ### Parsing ###
 
 hour_complet = sys.argv[1]
-am_pm = sys.argv[2].upper
+am_pm = sys.argv[2]
 ### Problem solving ###
 
 resultat = time_conversion(hour_complet,am_pm)
