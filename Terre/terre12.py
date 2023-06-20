@@ -31,18 +31,21 @@ def time_conversion(hour_time,am_or_pm):
 
 def handle_error():
 
+    if sys.argv != 2:
+        print("erreur")
+        exit()
+    
     hour_and_minute = time_conversion_split(sys.argv[1])
 
     if not hour_and_minute[0].isdigit() or not hour_and_minute[1].isdigit():
         print("Heure et minute doivent correspondre à des nombre")
         exit()
-    elif len(hour_and_minute) != 2 or len(hour_and_minute[0]) > 2 or len(hour_and_minute[1]) > 2:
+    elif len(hour_and_minute) != 2 or len(hour_and_minute[0]) > 2 or len(hour_and_minute[1]) > 2 or len(sys.arg[2]) != 1:
         print("Veuillez à entrer le bon modèle d'heure et de minutes")
         exit()
     elif int(hour_and_minute[0]) > 12 or int(hour_and_minute[1]) > 59:
         print("Les heures ne peuvent dépasser 12 et les minutes 59.")
         exit()
-
 
 ### Error ###
 
