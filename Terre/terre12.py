@@ -25,8 +25,7 @@ def time_conversion(hour_time,am_or_pm):
     else:
         if hour >= 12:
             return f"{hour - 12}:{minute}"
-        
-        if hour >= 1 and hour <= 12:
+        elif hour >= 1 and hour <= 12:
             return f"{hour}:{minute}"
         
 def handle_error():
