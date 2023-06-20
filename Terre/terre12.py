@@ -19,11 +19,12 @@ def time_conversion(hour_time,am_or_pm):
     if hour >= 12 and am_or_pm == "AM":
         hour -= 12
         return f"{hour}:{minute}"
-    elif hour >= 1 or hour <= 12 and am_or_pm == "AM" or "PM":
-        return f"{hour}:{minute}"
-    elif hour >= 0 or hour <= 12 and am_or_pm == "PM":
+    elif am_or_pm == "PM" and hour >= 1 or hour <= 11:
         hour += 12
         return f"{hour}:{minute}"
+    elif am_or_pm == "AM" and hour >= 1 or hour <= 12:
+        return f"{hour}:{minute}"
+   
     
 ### Error ###
 
