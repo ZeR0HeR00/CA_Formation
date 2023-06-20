@@ -15,7 +15,7 @@ def reverse_word(word):
     print(word[::-1])
     exit()
 
-def error():
+def handle_error():
     
     if len(sys.argv[1]) == 0 or len(sys.argv) != 2:
         print("erreur.")
@@ -23,7 +23,7 @@ def error():
 
 ### Error ###
 
-error()
+handle_error()
 
 ### Parsing ###
 

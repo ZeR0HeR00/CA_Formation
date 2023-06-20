@@ -23,7 +23,7 @@ def first_number(number):
         return f"Non, {number} n'est pas un nombre premier."
 
 
-def error():
+def handle_error():
 
     if len(sys.argv) != 2:
         print("erreur")
@@ -31,7 +31,7 @@ def error():
 
 ### Error ###
 
-error()
+handle_error()
 
 ### Parsing ###
 

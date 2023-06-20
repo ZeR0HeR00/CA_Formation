@@ -17,7 +17,7 @@ def chain_size(number_of_arguments):
     return size
     
 
-def error():
+def handle_error():
 
     arguments = "".join(sys.argv[1:])
 
@@ -27,7 +27,7 @@ def error():
 
 ### Error ###
 
-error()
+handle_error()
 
 ### Parsing ###
 

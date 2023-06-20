@@ -17,7 +17,7 @@ def alphabet(letter):
     alphabet = [chr(i) for i in range(ord(letter), ord("z") + 1)]
     return alphabet
 
-def error(arg):
+def handle_error(arg):
 
     if len(arg) != 2:
         print("erreur")
@@ -29,7 +29,7 @@ def error(arg):
     
 ### Error ###
 
-error(sys.argv)
+handle_error(sys.argv)
 
 ### Parsing ###
 

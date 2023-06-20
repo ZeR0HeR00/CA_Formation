@@ -20,7 +20,7 @@ def power_of_number(base, exposant):
         resultat *= base
         return resultat
 
-def error():
+def handle_error():
     
     if int(sys.argv[1]) < 0 or int(sys.argv[2]) < 0:
         print("erreur")
@@ -28,7 +28,7 @@ def error():
 
 ### Error ###
 
-error()
+handle_error()
 
 ### Parsing ###
 

@@ -23,7 +23,7 @@ def divisions(first_number, second_number):
     return [quotient, reste]
 
 
-def error():
+def handle_error():
 
     if len(sys.argv) != 3:
         print("erreur.")
@@ -40,7 +40,7 @@ def error():
 
 ### Error ###
 
-error()
+handle_error()
 
 ### Parsing ###
 

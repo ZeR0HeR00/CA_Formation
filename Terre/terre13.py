@@ -14,7 +14,7 @@ def find_middle_number(first, second, third):
     else:
         return third
 
-def error():
+def handle_error():
 
     if len(sys.argv) != 4:
         print("Le nomnbre d'argument n'est pas correct")
@@ -26,7 +26,7 @@ def error():
 
 ### Error ###
 
-error()
+handle_error()
 
 ### Parsing ###
 

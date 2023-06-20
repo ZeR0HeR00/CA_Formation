@@ -10,7 +10,7 @@ def square_root(base):
     return resultat
 
 
-def error():
+def handle_error():
     
     if int(sys.argv[1]) <= 0:
         print("erreur")
@@ -18,7 +18,7 @@ def error():
 
 ### Error ###
 
-error()
+handle_error()
 
 ### Parsing ###
 

@@ -32,7 +32,7 @@ def time_conversion(hour_time, am, pm):
         return f"{hour}:{minute} {pm}"
 
 
-def error():
+def handle_error():
 
     hour_and_minute = time_conversion_split(sys.argv[1:])
 
@@ -49,7 +49,7 @@ def error():
 
 ### Error ###
 
-error()
+handle_error()
 
 ### Parsing ###
 

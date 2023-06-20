@@ -21,7 +21,7 @@ def is_even_or_odd(number):
         return "impair"
 
 
-def error():
+def handle_error():
 
     if len(sys.argv) != 2 or not sys.argv[1].isdigit():
         print("erreur.")
@@ -29,7 +29,7 @@ def error():
 
 ### Error ###
 
-error()
+handle_error()
 
 ### Parsing ###
 
