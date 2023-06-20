@@ -21,7 +21,6 @@ def error():
 
     arguments = "".join(sys.argv[1:])
 
-
     if len(sys.argv) != 2 or arguments.isdigit():
         print("erreur")
         exit()
