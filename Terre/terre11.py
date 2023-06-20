@@ -19,12 +19,10 @@ def time_conversion(hour_time, am, pm):
         "".join(hour_and_minute[1]))
 
     if hour == 00:
-        hour = 12
-        return f"{hour}:{minute} {am}"
+        return f"{hour + 12}:{minute} {am}"
 
     if hour == 13 or hour <= 23:
-        hour = hour - 12
-        return f"{hour}:{minute} {pm}"
+        return f"{hour - 12}:{minute} {pm}"
 
     if hour > 00 and hour < 12:
         return f"{hour}:{minute} {am}"
