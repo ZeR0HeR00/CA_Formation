@@ -12,12 +12,12 @@ import sys
 ### Function ###
 
 def reverse_word(word):
-
-    return word[::-1]
+    print(word[::-1])
+    exit()
 
 def error():
     
-    if len(sys.argv[1]) == 0:
+    if len(sys.argv[1]) == 0 or len(sys.argv) != 2:
         print("erreur.")
         exit()
 
@@ -27,7 +27,7 @@ error()
 
 ### Parsing ###
 
-word = sys.argv[1:]
+word = sys.argv[1]
 
 
 ### Problem solving ###
