@@ -2,23 +2,22 @@
 import sys
 ### Function ###
 
+def is_delimiteur(char):
+    return char == " " or char == "\n" or char == "\t"
+
 def uppercase_over_two(text):
+    text = text.lower()
     chaine_uppercase = ""
-    word_split = True
+    previous_char = ""
 
-    for character in text:
-        if character.isalpha():
-            if word_split:
-                chaine_uppercase += character.upper()
-                word_split = False
-            else:
-                chaine_uppercase += character.lower()
+    for i in range(len(text)):
+        if previous_char == "" or is_delimiteur(previous_char):
+            chaine_uppercase += text[i].upper()
         else:
-            chaine_uppercase += character
-            word_split = True
-    print(chaine_uppercase)
-    exit()
+            chaine_uppercase += text[i]
+        previous_char = text[i]
 
+    return chaine_uppercase
 
 def handle_error():
 
