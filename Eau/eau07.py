@@ -5,7 +5,7 @@ import sys
 def is_delimiteur(char):
     return char == " " or char == "\n" or char == "\t"
 
-def uppercase_over_two(text):
+def uppercase(text):
     text = text.lower()
     chaine_uppercase = ""
     previous_char = ""
@@ -39,7 +39,7 @@ text = sys.argv[1]
 
 ### Problem solving ###
 
-resultat = uppercase_over_two(text)
+resultat = uppercase(text)
 
 ### Result ###
 
