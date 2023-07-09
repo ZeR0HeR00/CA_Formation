@@ -20,10 +20,10 @@ def absolut_min_difference(number_array):
     minimum = abs(number_array[0] - number_array[1])
 
     for i in range(1, len(number_array) - 1):
-        result_soustraction = abs(number_array[i] - number_array[i + 1])
+        result_substraction = abs(number_array[i] - number_array[i + 1])
             
-        if minimum > result_soustraction:
-            minimum = result_soustraction
+        if minimum > result_substraction:
+            minimum = result_substraction
     
     return minimum
     
