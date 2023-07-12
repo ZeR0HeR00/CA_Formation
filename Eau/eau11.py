@@ -5,12 +5,10 @@ import sys
 ### Function ###
     
 def absolut_min_difference(number_array):
-    try:
 
+    try:
         for i in range(len(number_array)):
             number_array[i] = int(number_array[i])
-
-    
     except ValueError:
         print("Enter numbers only")
         exit()
